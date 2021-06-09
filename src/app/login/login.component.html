@@ -1,0 +1,14 @@
+<h2>Login User</h2>
+<form #loginFormUserData="ngForm" (ngSubmit)="submitLoginUser(loginFormUserData)">
+    <div class="form-group">
+      <label for="exampleInputUsername">Username</label>
+      <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp" name="username" #username="ngModel" ngModel required>
+      <!-- <small id=usernameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password" #password="ngModel" ngModel required>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!loginFormUserData.valid">Submit</button>
+</form>
